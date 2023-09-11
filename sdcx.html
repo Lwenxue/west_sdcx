@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>苏堤春晓</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 	</head>
 	<style>
 		body {
@@ -44,6 +45,8 @@
 		  text-decoration: none;
 		  z-index: 9999;
 		}
+		
+		
 		.menu {
 		  width: 25%;
 		  height: 100vh;
@@ -104,7 +107,8 @@
 			padding: 5px 10px;
 		}
 		.me h2{
-			text-align:center;}
+			text-align: center;
+		}
 		.photo1{
 			width: 25%;
 			height: 20%;
@@ -135,6 +139,37 @@
 			float: left;
 			margin-left: 15px;
 		}
+		/* 定义箭头样式 */
+		.arrow {
+		  font-size: 20px;
+		  vertical-align: middle;
+		}
+		
+		/* 定义按钮样式 */
+		.button {
+		  display: inline-block;
+		  padding: 5px 8px;
+		  border: none;
+		  border-radius: 3px;
+		  background-color: #929392;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 8px;
+		}
+		.pagination  {
+		  position: fixed;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+		
+		/* 定义按钮 hover 状态的样式 */
+		.button:hover {
+		  background-color: #929392;
+		}
+		.button i {
+		      font-size: 8px; /* 这里设置图标的大小 */
+		    }
 	</style>
 	<body>
 	<div class="container">
@@ -244,6 +279,22 @@
 			<img class="shi" src="wa/shi.jpg"/>
 			<p>后人为怀念苏东坡浚湖筑堤的政绩，就将这条南北长堤称为苏堤。春日之晨，六桥烟柳笼纱，几声莺啼，报道苏堤春早，有民谣唱道：
 			“西湖景致六吊桥，一株杨柳一株桃。”“西湖十景”中的苏堤春晓就此而得名。</p>
+			<div class="pagination">
+			    <a href="https://lwenxue.github.io/west_phqy/phqy.html" class="prev">
+					<!-- 上一页按钮 -->
+				  <button class="button" onclick="goToPreviousPage()">
+					<i class="arrow fas fa-chevron-left"></i>
+					上一页
+				  </button>
+				</a>
+			    <a href="https://lwenxue.github.io/west_qyfh/qyfh.html" class="next">
+					<!-- 下一页按钮 -->
+					<button class="button" onclick="goToNextPage()">
+										下一页
+					<i class="arrow fas fa-chevron-right"></i>
+					</button>
+				</a>
+			</div>
 		</div>
 	</body>
 	<script>
